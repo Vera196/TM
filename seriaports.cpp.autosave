@@ -1,0 +1,31 @@
+#include "seriaports.h"
+
+SeriaPorts::SeriaPorts()
+{
+    
+}
+
+SeriaPorts::~SeriaPorts()
+{
+    foreach(QSerialPort* port, ports)
+    {
+        port->close();
+    }
+    
+}
+
+void SeriaPorts::addPort(QString name)
+{
+    ports.push_back(new QSerialPort(this));
+    ports.last()->setPortName(name);
+    portSettings();
+}
+
+void SeriaPorts::portSettings()
+{
+    ports.last()->setBaudRate(QSerialPort::Baud9600);
+    ports.last()->setDataBits(QSerialPort::Data8);
+    ports.last()->setParity(QSerialPort::NoParity);
+    ports.last()->setStopBits(QSerialPort::OneStop);
+    ports.last()->setFlowControl(QSerialPort::NoFlowControl);
+}

@@ -1,0 +1,23 @@
+#ifndef SERIAPORTS_H
+#define SERIAPORTS_H
+
+#include <QObject>
+#include "mainwindow.h"
+
+class SeriaPorts : public QObject
+{
+    Q_OBJECT
+    
+    QVector<QSerialPort *> ports;
+    
+public:
+    SeriaPorts();
+    ~SeriaPorts();
+    void addPort(QString);
+    void portSettings();
+
+signals:
+
+};
+
+#endif // SERIAPORTS_H
