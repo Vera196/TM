@@ -4,6 +4,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QThread>
 
+//roma
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
