@@ -5,6 +5,7 @@
 #include <QThread>
 
 //roma
+//Vodka
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
