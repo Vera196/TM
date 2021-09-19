@@ -4,6 +4,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QThread>
 
+//HELLO
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
